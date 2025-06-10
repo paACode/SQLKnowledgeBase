@@ -1,0 +1,6 @@
+employee_nr,first_name,last_name,street,street_nr,zipcode
+1,Anna,Meier,Hauptstrasse,12,6003
+2,Tom,Müller,Bergweg,3,6005
+3,Lea,Schmid,Seestrasse,,6010
+4,Luca,Weber,Alpenblick,45,6002
+5,Nina,Keller,Dorfplatz,1,6004
