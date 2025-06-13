@@ -15,6 +15,8 @@ SELECT User, Host FROM mysql.user;
 
 GRANT ALL PRIVILEGES ON RecommenDB.* TO admin@localhost; -- allow reading, writing, deleting
 GRANT SYSTEM_VARIABLES_ADMIN ON *.* TO admin@localhost; -- this is needed for backupp
+GRANT PROCESS ON *.* TO 'admin'@'localhost';
+
 
 SHOW GRANTS FOR admin@localhost;
 
@@ -29,3 +31,6 @@ CREATE OR REPLACE VIEW Visualization.rating_numbers AS SELECT * FROM RecommenDB.
 CREATE OR REPLACE VIEW Visualization.Ratings5MI AS SELECT * FROM RecommenDB.Ratings5MI;
 GRANT SELECT ON Visualization.* TO gui@localhost;
 FLUSH PRIVILEGES;
+
+SHOW GRANTS FOR gui@localhost;
+SHOW GRANTS FOR admin@localhost;
