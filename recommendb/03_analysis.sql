@@ -1,3 +1,4 @@
+USE RecommenDB;
 SELECT 
 	UserID, 
     MovieID,
