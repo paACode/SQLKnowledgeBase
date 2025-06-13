@@ -80,3 +80,19 @@ SELECT MovieID, Title, COUNT(*) AS N5R FROM Ratings5MI
 WHERE UserID IN (
 SELECT UserId AS TargetGroup FROM Ratings5MI
 WHERE MovieID = 1097 ) GROUP BY MovieID, Title ORDER BY COUNT(*) DESC LIMIT 10;
+
+
+-- Create a table to be used in visualization
+CREATE TABLE Rating_Numbers AS
+SELECT
+    MovieID,
+    COUNT(*) AS N_Ratings5_All
+FROM
+    Ratings
+WHERE
+    Rating = 5
+GROUP BY
+    MovieID;
+
+-- Create an index on the new table
+CREATE INDEX IX_MovieID ON Rating_Numbers(MovieID);
