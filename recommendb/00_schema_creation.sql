@@ -36,3 +36,13 @@ CREATE TABLE Movie_has_Genre (
     FOREIGN KEY (MovieID) REFERENCES Movies(MovieID),
     FOREIGN KEY (GenreID) REFERENCES Genres(GenreID)
 );
+
+
+CREATE TABLE Details (
+    DetailsID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    MovieID INTEGER UNIQUE,
+    Budget DECIMAL(15,2),
+    Revenue DECIMAL(15,2),
+    Duration INT,
+    FOREIGN KEY (MovieID) REFERENCES Movies(MovieID)
+);
